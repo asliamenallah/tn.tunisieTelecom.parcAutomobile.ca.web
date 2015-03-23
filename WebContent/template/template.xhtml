@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title><ui:insert name="pagetitle"></ui:insert></title>
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/ressourece/css/default.css"></link>
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/ressourece/css/print.css"></link>
+</h:head>
+<body>
+<div id="view">
+	<div id="header">
+		<ui:include src="/template/header.xhtml" />
+	</div>
+	<div id="content">
+			<ui:insert name="pageContent"></ui:insert>
+	</div>
+
+		<ui:include src="/template/footer.xhtml" />
+	
+</div>
+</body>
+</html>

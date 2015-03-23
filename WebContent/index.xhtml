@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:define name="pagetitle"> Welcome </ui:define>
+	<ui:define name="pageContent">
+		<h1>welcome</h1>
+
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="login" />
+				<h:inputText value="#{athenticationCtr.login}" />
+				<h:outputLabel value="passwork" />
+				<h:inputSecret value="#{athenticationCtr.pass}" />
+			</h:panelGrid>
+
+			<h:commandButton action="#{athenticationCtr.doLogin()}"
+				value="valider" />
+				
+		</h:form>
+	</ui:define>
+</ui:composition>
